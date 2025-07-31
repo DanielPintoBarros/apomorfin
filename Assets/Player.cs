@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     private bool isGrounded;
 
+    private float grabMoveLoss = 0.3f;
+
 
     private DraggableBlock currentBlock;
     private Vector3 blockOffset;
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         moveSpeed = 2f;
         jumpForce = 4f;
+        grabMoveLoss = 0.7f; // não pode ser maior que 1
     }
 
     // Update is called once per frame
@@ -29,13 +32,17 @@ public class Player : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
-        Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
-        Vector3 velocity = rb.velocity;
+        Vector3 move;
+        if (currentBlock != null) {
+            move = moveDirection * moveSpeed * (1.0f - grabMoveLoss) * Time.deltaTime;
+        } else {
+            move =  moveDirection * moveSpeed * Time.deltaTime;
+        }
 
         if (moveDirection != Vector3.zero && currentBlock == null)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20f);
         }
         rb.MovePosition(rb.position + move);
 
