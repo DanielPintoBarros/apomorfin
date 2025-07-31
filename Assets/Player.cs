@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jumpForce = 5f;
+    public float moveSpeed;
+    public float jumpForce;
     private Rigidbody rb;
     private bool isGrounded;
 
@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        moveSpeed = 2f;
+        jumpForce = 4f;
     }
 
     // Update is called once per frame
@@ -23,8 +25,8 @@ public class Player : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
-        Vector3 moveDirection = new Vector3(moveX, 0f, moveZ);
-        Vector3 move = moveDirection * moveSpeed;
+        Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
+        Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
         Vector3 velocity = rb.velocity;
 
         if (moveDirection != Vector3.zero)
@@ -32,7 +34,7 @@ public class Player : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
-        rb.velocity = new Vector3(move.x, velocity.y, move.z);
+         rb.MovePosition(rb.position + move);
 
         // Pulo
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
