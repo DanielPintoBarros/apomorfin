@@ -94,6 +94,7 @@ public class Player : MonoBehaviour
         {
             isGrounded = true;
             airJump = false;
+            Camera.main.GetComponent<CameraFollowGroundY>().UpdateGroundY(collision.contacts[0].point.y);
         }
     }
 
