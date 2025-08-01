@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float jumpForce;
     private Rigidbody rb;
     private bool isGrounded;
-
+    private bool airJump;
     private float grabMoveLoss = 0.3f;
 
 
@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
         moveSpeed = 2f;
         jumpForce = 4f;
         grabMoveLoss = 0.7f; // não pode ser maior que 1
+        gameObject.tag = "Player";
+        airJump = false;
     }
 
     // Update is called once per frame
@@ -47,9 +49,18 @@ public class Player : MonoBehaviour
         rb.MovePosition(rb.position + move);
 
         // Pulo
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || !airJump))
         {
+            // Tratamento para o pulo duplo
+            if (!isGrounded && !airJump)
+            {
+                airJump = true;
+                Vector3 velocity = rb.velocity;
+                velocity.y = 0f;
+                rb.velocity = velocity;
+            }
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -74,13 +85,20 @@ public class Player : MonoBehaviour
     void OnCollisionStay(Collision collision)
     {
         // Detecta se está tocando o chão
-        isGrounded = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+            airJump = false;
+        }
     }
 
     void OnCollisionExit(Collision collision)
     {
         // Saiu do chão
-        isGrounded = false;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
     }
 
     private void TryGrabBlock()

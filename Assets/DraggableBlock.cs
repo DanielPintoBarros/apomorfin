@@ -10,6 +10,7 @@ public class DraggableBlock : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
+        rb.isKinematic = true;
         if (!isBeingCarried && collision.collider.CompareTag("Player"))
         {
             touchingPlayer = collision.transform;
@@ -27,7 +28,7 @@ public class DraggableBlock : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.isKinematic = true;
+        rb.isKinematic = false;
     }
 
     public bool CanBeGrabbed()
