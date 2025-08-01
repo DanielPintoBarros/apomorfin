@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool airJump;
     private float grabMoveLoss = 0.3f;
+    private Vector3 lastCheckpointPosition;
 
 
     private DraggableBlock currentBlock;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
         grabMoveLoss = 0.7f; // não pode ser maior que 1
         gameObject.tag = "Player";
         airJump = false;
+        lastCheckpointPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -35,10 +37,13 @@ public class Player : MonoBehaviour
 
         Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
         Vector3 move;
-        if (currentBlock != null) {
+        if (currentBlock != null)
+        {
             move = moveDirection * moveSpeed * (1.0f - grabMoveLoss) * Time.deltaTime;
-        } else {
-            move =  moveDirection * moveSpeed * Time.deltaTime;
+        }
+        else
+        {
+            move = moveDirection * moveSpeed * Time.deltaTime;
         }
 
         if (moveDirection != Vector3.zero && currentBlock == null)
@@ -60,7 +65,7 @@ public class Player : MonoBehaviour
                 rb.velocity = velocity;
             }
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            
+
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -113,5 +118,34 @@ public class Player : MonoBehaviour
                 break;
             }
         }
+    }
+    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Respawn"))
+        {
+            // Atualiza o último ponto de respawn
+            lastCheckpointPosition = other.transform.position;
+            Debug.Log("Checkpoint atualizado!");
+        }
+
+        if (other.CompareTag("Damage"))
+        {
+            // Morreu - teleporta para o último respawn
+            DieAndRespawn();
+        }
+    }
+
+    void DieAndRespawn()
+    {
+        // Opcional: adicionar delay, efeitos, resetar blocos, etc.
+        rb.velocity = Vector3.zero; // Zera velocidade ao morrer
+        if (currentBlock != null)
+        {
+            currentBlock.Release();
+            currentBlock = null;
+        }
+        transform.position = lastCheckpointPosition;
+        Debug.Log("Morreu! Voltando ao último checkpoint.");
     }
 }
