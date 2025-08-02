@@ -5,7 +5,6 @@ public class CameraFollowGroundY : MonoBehaviour
     public Transform target; // Jogador
     
     public float smoothSpeed = 2f;
-    private float groundY = 0f;
     public Vector3 offsetXYZ;
 
     void Start()
@@ -23,18 +22,12 @@ public class CameraFollowGroundY : MonoBehaviour
     {
         Vector3 desiredPosition = new Vector3(
             target.position.x + offsetXYZ.x,
-            groundY + offsetXYZ.y,
+            target.position.y + offsetXYZ.y,
             target.position.z + offsetXYZ.z
         );
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
 
         Quaternion targetRotation = Quaternion.LookRotation(target.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * smoothSpeed);
-    }
-
-    // Chame este método do Player quando ele tocar no chão
-    public void UpdateGroundY(float newY)
-    {
-        groundY = newY;
     }
 }

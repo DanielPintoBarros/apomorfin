@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     private Rigidbody rb;
-    private bool isGrounded;
-    private bool airJump;
+    public bool isGrounded;
+    public bool airJump;
     private float grabMoveLoss = 0.3f;
     private Vector3 lastCheckpointPosition;
 
@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
             velocity.y = 0f;
             rb.velocity = velocity;
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
 
         }
 
@@ -89,22 +90,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Detecta se está tocando o chão
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-            airJump = false;
-            Camera.main.GetComponent<CameraFollowGroundY>().UpdateGroundY(collision.contacts[0].point.y);
-        }
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        // Saiu do chão
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-        }
+        CheckIfGrounded();
     }
 
     private void TryGrabBlock()
@@ -120,7 +106,7 @@ public class Player : MonoBehaviour
             }
         }
     }
-    
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Respawn"))
@@ -146,5 +132,19 @@ public class Player : MonoBehaviour
             currentBlock = null;
         }
         transform.position = lastCheckpointPosition;
+    }
+    
+    void CheckIfGrounded()
+    {
+    Vector3 origin = transform.position + Vector3.down * 0.1f;
+    float radius = 0.1f;
+
+    // Detecta se há colisores abaixo do jogador (exclui o próprio player)
+    isGrounded = Physics.CheckSphere(origin, radius, ~LayerMask.GetMask("Player"));
+
+        if (isGrounded)
+        {
+            airJump = false;
+        }
     }
 }
