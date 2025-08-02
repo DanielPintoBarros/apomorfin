@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     public bool isGrounded;
     public bool airJump;
     private float grabMoveLoss = 0.3f;
-    private Vector3 lastCheckpointPosition;
+    public Vector3 lastCheckpointPosition;
+    public RespawnPoint respawnPoint;
 
 
     private DraggableBlock currentBlock;
@@ -107,12 +108,31 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void SetRespawnBlock()
+    {
+        Collider[] hits = Physics.OverlapSphere(transform.position, 1.2f);
+        foreach (var respawn in FindObjectsOfType<RespawnPoint>())
+        {
+            respawnPoint = respawn;
+            return;
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Respawn"))
         {
-            // Atualiza o último ponto de respawn
-            lastCheckpointPosition = other.transform.position;
+            RespawnPoint newRespawn = other.GetComponent<RespawnPoint>();
+            if (newRespawn != null && newRespawn != respawnPoint)
+            {
+                if (respawnPoint != null)
+                {
+                    respawnPoint.SpawnDesactivate();
+                }
+                respawnPoint = newRespawn;
+                respawnPoint.SpawnActivate();
+            }
+            
         }
 
         if (other.CompareTag("Damage"))
@@ -131,7 +151,10 @@ public class Player : MonoBehaviour
             currentBlock.Release();
             currentBlock = null;
         }
-        transform.position = lastCheckpointPosition;
+        if (respawnPoint != null)
+        {
+            transform.position = respawnPoint.GetSpawnPosition();
+        }
     }
     
     void CheckIfGrounded()
