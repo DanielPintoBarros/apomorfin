@@ -1,10 +1,12 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class DraggableBlock : MonoBehaviour
 {
     private Rigidbody rb;
-    private Transform touchingPlayer ;
+    private BoxCollider bc;
+    private Transform touchingPlayer;
     private bool isBeingCarried  = false;
     private Quaternion initialRotation;
 
@@ -29,6 +31,8 @@ public class DraggableBlock : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = false;
+        bc = GetComponent<BoxCollider>();
+        bc.isTrigger = false;
     }
 
     public bool CanBeGrabbed()

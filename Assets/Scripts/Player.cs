@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     private float grabMoveLoss = 0.3f;
     public Vector3 lastCheckpointPosition;
     public RespawnPoint respawnPoint;
+    private Animator animator;
+    public string currentAnimation;
 
 
     private DraggableBlock currentBlock;
@@ -28,6 +30,8 @@ public class Player : MonoBehaviour
         gameObject.tag = "Player";
         airJump = false;
         lastCheckpointPosition = transform.position;
+        animator = GetComponent<Animator>();
+        currentAnimation = "Idle";
     }
 
     // Update is called once per frame
@@ -35,6 +39,16 @@ public class Player : MonoBehaviour
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
+        if ((moveX != 0.0f || moveZ != 0.0f) && currentAnimation == "Idle")
+        {
+            animator.SetBool("Walk", true);
+            currentAnimation = "Walk";
+        }
+        else if (moveX == 0.0f && moveZ == 0.0f && currentAnimation == "Walk")
+        {
+            animator.SetBool("Walk", false);
+            currentAnimation = "Idle";
+        }
 
         Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
         Vector3 move;
@@ -57,9 +71,16 @@ public class Player : MonoBehaviour
         // Pulo
         if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || !airJump))
         {
+            if (currentAnimation == "Walk" || currentAnimation == "Fly" || currentAnimation == "Swim")
+            {
+                animator.SetBool(currentAnimation, false);
+            }
+            animator.SetTrigger("Jump");
             // Tratamento para o pulo duplo
             if (!isGrounded && !airJump)
             {
+                animator.SetTrigger("Land");
+                animator.SetTrigger("Jump");
                 airJump = true;
             }
             Vector3 velocity = rb.velocity;
@@ -144,6 +165,7 @@ public class Player : MonoBehaviour
 
     void DieAndRespawn()
     {
+        animator.SetTrigger("Hurt");
         // Opcional: adicionar delay, efeitos, resetar blocos, etc.
         rb.velocity = Vector3.zero; // Zera velocidade ao morrer
         if (currentBlock != null)
@@ -155,6 +177,7 @@ public class Player : MonoBehaviour
         {
             transform.position = respawnPoint.GetSpawnPosition();
         }
+        animator.SetTrigger("Reset");
     }
     
     void CheckIfGrounded()
@@ -167,6 +190,7 @@ public class Player : MonoBehaviour
 
         if (isGrounded)
         {
+            animator.SetTrigger("Land");
             airJump = false;
         }
     }
