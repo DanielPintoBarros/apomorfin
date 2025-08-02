@@ -6,16 +6,12 @@ using UnityEngine;
 [Serializable]
 public class DialogText
 {
-    [SerializeField] private string phrase, continueBtn;
+    [SerializeField] [TextArea(1, 4)] private string phrase;
+    
 
-    public string GetFrase()
+    public string GetPhrase()
     {
         return phrase;
-    }
-
-    public string GetContinueBtn()
-    {
-        return continueBtn;
     }
 }
 
