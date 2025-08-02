@@ -60,10 +60,10 @@ public class Player : MonoBehaviour
             if (!isGrounded && !airJump)
             {
                 airJump = true;
-                Vector3 velocity = rb.velocity;
-                velocity.y = 0f;
-                rb.velocity = velocity;
             }
+            Vector3 velocity = rb.velocity;
+            velocity.y = 0f;
+            rb.velocity = velocity;
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
         }
@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnCollisionStay(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         // Detecta se está tocando o chão
         if (collision.gameObject.CompareTag("Ground"))
@@ -127,7 +127,6 @@ public class Player : MonoBehaviour
         {
             // Atualiza o último ponto de respawn
             lastCheckpointPosition = other.transform.position;
-            Debug.Log("Checkpoint atualizado!");
         }
 
         if (other.CompareTag("Damage"))
@@ -147,6 +146,5 @@ public class Player : MonoBehaviour
             currentBlock = null;
         }
         transform.position = lastCheckpointPosition;
-        Debug.Log("Morreu! Voltando ao último checkpoint.");
     }
 }
