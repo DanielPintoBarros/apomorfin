@@ -13,7 +13,7 @@ public class CameraFollowGroundY : MonoBehaviour
         // Salva o offset inicial em X e Z
         offsetXYZ = new Vector3(
             0f,
-            2f,
+            3.5f,
             -3f
         );
     }
