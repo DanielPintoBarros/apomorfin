@@ -10457,7 +10457,6 @@ Transform:
   - {fileID: 1495684789}
   - {fileID: 369824859}
   - {fileID: 117134790}
-  - {fileID: 1434072004}
   - {fileID: 1504893470}
   - {fileID: 1764702706}
   - {fileID: 1197643272}
@@ -52991,97 +52990,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.096012, y: 2.0718539, z: 2.1344073}
   m_Center: {x: 0.018742621, y: 1.0346085, z: -0.0023173094}
---- !u!1001 &1434072003
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 254799489}
-    m_Modifications:
-    - target: {fileID: 3168220855669042670, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_Name
-      value: Parede_pedra (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -16.950214
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3168220855669042670, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1434072006}
-  m_SourcePrefab: {fileID: 100100000, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
---- !u!4 &1434072004 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8128296321831911726, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-  m_PrefabInstance: {fileID: 1434072003}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1434072005 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3168220855669042670, guid: 838e6136a5faad54989e32003740dc3f, type: 3}
-  m_PrefabInstance: {fileID: 1434072003}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1434072006
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1434072005}
-  m_Material: {fileID: 13400000, guid: 1944c50d112ea46448e791d054a96f17, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1434088653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68964,8 +68872,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 34.54515, y: 0.85645366, z: 27.314465}
-  m_Center: {x: -0.5159025, y: 1.7225531, z: -3.6473064}
+  m_Size: {x: 34.54515, y: 0.85645366, z: 108.36566}
+  m_Center: {x: -0.5159035, y: 1.7225531, z: 36.878296}
 --- !u!1001 &1883580644
 PrefabInstance:
   m_ObjectHideFlags: 0
