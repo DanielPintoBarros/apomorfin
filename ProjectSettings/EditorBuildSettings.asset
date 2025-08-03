@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Fase_Mar.unity
     guid: b0d50d9c0bfe46a499d3782514387b3d
   - enabled: 1
-    path: Assets/Scenes/Fas_Praia.unity
-    guid: 47f27d0c031693d47b498ec811fe49ca
+    path: Assets/Scenes/Fase_Praia.unity
+    guid: 7496e35eb7ade114e9b623ad2b03f1d6
   m_configObjects: {}
