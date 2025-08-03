@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
 public class Dialog 
@@ -9,6 +10,8 @@ public class Dialog
     [SerializeField] private DialogText[] phrases;
 
     [SerializeField] private string npcName;
+
+    [SerializeField] UnityEvent action;
 
     public DialogText[] GetPhrases()
     {
@@ -18,5 +21,13 @@ public class Dialog
     public string GetNPCName()
     {
         return npcName;
+    }
+
+    public void DoAction()
+    {
+        if (action != null)
+        {
+            action.Invoke();
+        }
     }
 }

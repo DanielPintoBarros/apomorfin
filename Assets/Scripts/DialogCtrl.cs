@@ -31,6 +31,7 @@ public class DialogCtrl : MonoBehaviour
         if (count == currentDialog.GetPhrases().Length)
         {
             dialogBox.gameObject.SetActive(false);
+            currentDialog.DoAction();
             currentDialog = null;
             count = 0;
             return;
