@@ -10,8 +10,8 @@ public class DialogCtrl : MonoBehaviour
 
     [SerializeField] GameObject dialogBox;
 
-    private int count = 0;
-    private Dialog currentDialog;
+    public int count = 0;
+    public Dialog currentDialog;
 
     internal void Initialize(Dialog dialog)
     {
@@ -33,6 +33,7 @@ public class DialogCtrl : MonoBehaviour
             dialogBox.gameObject.SetActive(false);
             currentDialog = null;
             count = 0;
+            return;
         }
 
         npcName.text = currentDialog.GetNPCName();
@@ -40,5 +41,10 @@ public class DialogCtrl : MonoBehaviour
 
         dialogBox.gameObject.SetActive(true);
         count++;
+    }
+
+    public bool IsDialogActive()
+    {
+        return currentDialog != null;
     }
 }

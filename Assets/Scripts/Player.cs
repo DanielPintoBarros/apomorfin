@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
+    [SerializeField] private DialogCtrl dialogCtrl;
+
     public float moveSpeed;
     public float jumpForce;
     private Rigidbody rb;

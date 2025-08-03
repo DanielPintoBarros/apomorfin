@@ -340,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c091263dcb4ae24d926bcf25dfb9b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eBtn: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1515,18 @@ PrefabInstance:
     - target: {fileID: 5757763280394442052, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832041457914089182, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832041457914089182, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503367325173248809, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
+      propertyPath: dialog.npcName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

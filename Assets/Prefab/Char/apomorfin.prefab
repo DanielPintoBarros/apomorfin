@@ -79,6 +79,9 @@ PrefabInstance:
       addedObject: {fileID: 3039463260067762448}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 3341773302583404690}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 8100677855734560936}
     - targetCorrespondingSourceObject: {fileID: -35745619698210180, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
       insertIndex: -1
@@ -177,6 +180,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 5
+  isGrounded: 0
+  airJump: 0
+  lastCheckpointPosition: {x: 0, y: 0, z: 0}
+  respawnPoint: {fileID: 0}
+  currentAnimation: 
+--- !u!114 &3341773302583404690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9101858962962674583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1ef456e51c56e4e979851a29b4d9d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteracting: 0
 --- !u!95 &8100677855734560936
 Animator:
   serializedVersion: 5

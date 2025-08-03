@@ -10,6 +10,8 @@ public class DraggableBlock : MonoBehaviour
     private bool isBeingCarried  = false;
     private Quaternion initialRotation;
 
+    [SerializeField] GameObject eBtn;
+
     void OnCollisionStay(Collision collision)
     {
 
@@ -31,6 +33,22 @@ public class DraggableBlock : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             touchingPlayer = null;
+        }
+    }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            eBtn.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            eBtn.SetActive(false);
         }
     }
 

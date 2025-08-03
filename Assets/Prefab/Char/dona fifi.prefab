@@ -75,6 +75,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fbcb4429558284947ac35ce49e0ba996, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4967555697094808850}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fbcb4429558284947ac35ce49e0ba996, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2824313791886969037}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fbcb4429558284947ac35ce49e0ba996, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8447427528441149506}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fbcb4429558284947ac35ce49e0ba996, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 569680775242051388}
   m_SourcePrefab: {fileID: 100100000, guid: fbcb4429558284947ac35ce49e0ba996, type: 3}
 --- !u!1 &4719091119752473681 stripped
 GameObject:
@@ -102,3 +111,70 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!136 &2824313791886969037
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4719091119752473681}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8447427528441149506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4719091119752473681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419d67c64bd3bf444afc250ea235d73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactPlayer: {fileID: 0}
+  pressedBtn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 569680775242051388}
+        m_TargetAssemblyTypeName: DialogLauncher, Assembly-CSharp
+        m_MethodName: Initialize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &569680775242051388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4719091119752473681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249598bee2d88934c9286015ce6588d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogCtrl: {fileID: 0}
+  dialog:
+    phrases: []
+    npcName: Dona Fifi
