@@ -69,6 +69,7 @@ public class PauseSystem : MonoBehaviour
 
     private IEnumerator DelayedExitGame()
     {
+        Time.timeScale = 1f;
         yield return new WaitForSeconds(actionDelay);
         Application.Quit();
     }
