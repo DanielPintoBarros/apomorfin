@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4233017
+      value: -1.6433916
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.798
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.205744
+      value: -8.032562
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48,9 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -35745619698210180, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 892418832616426168, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -62,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871197930042950466, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -178,13 +182,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f6542b270a1a94788e75faca1fa5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogCtrl: {fileID: 0}
+  canLearnFly: 0
+  canLearnPush: 0
+  canFly: 0
+  canPush: 0
   moveSpeed: 5
   jumpForce: 5
   isGrounded: 0
   airJump: 0
+  isDead: 0
   lastCheckpointPosition: {x: 0, y: 0, z: 0}
   respawnPoint: {fileID: 0}
+  uiAnim: {fileID: 0}
   currentAnimation: 
 --- !u!114 &3341773302583404690
 MonoBehaviour:
