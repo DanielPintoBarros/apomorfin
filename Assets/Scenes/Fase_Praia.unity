@@ -11781,15 +11781,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8540876830849467562, guid: a4356c13a15887e47bccc05519b96437, type: 3}
       propertyPath: dialog.phrases.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8540876830849467562, guid: a4356c13a15887e47bccc05519b96437, type: 3}
       propertyPath: dialog.phrases.Array.data[0].phrase
-      value: Ai Papai!
+      value: Como foi que eu fiz mesmo?
       objectReference: {fileID: 0}
     - target: {fileID: 8540876830849467562, guid: a4356c13a15887e47bccc05519b96437, type: 3}
       propertyPath: dialog.phrases.Array.data[1].phrase
-      value: Tome!!!
+      value: " Sei l\xE1! Acho que s\xF3\u2026 Pulei do ninho, abri as asas e voei."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540876830849467562, guid: a4356c13a15887e47bccc05519b96437, type: 3}
+      propertyPath: dialog.phrases.Array.data[2].phrase
+      value: "Deve funcionar n\xE3o?"
       objectReference: {fileID: 0}
     - target: {fileID: 8547662364259234509, guid: a4356c13a15887e47bccc05519b96437, type: 3}
       propertyPath: fBtn
@@ -28794,6 +28798,28 @@ PrefabInstance:
       propertyPath: dialogCtrl
       value: 
       objectReference: {fileID: 1676528794}
+    - target: {fileID: 8540876830849467562, guid: a4356c13a15887e47bccc05519b96437, type: 3}
+      propertyPath: dialog.phrases.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540876830849467562, guid: a4356c13a15887e47bccc05519b96437, type: 3}
+      propertyPath: dialog.phrases.Array.data[0].phrase
+      value: Oi pequerrucho! Tudo bem?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540876830849467562, guid: a4356c13a15887e47bccc05519b96437, type: 3}
+      propertyPath: dialog.phrases.Array.data[1].phrase
+      value: "Voc\xEA n\xE3o deveria estar nadando?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540876830849467562, guid: a4356c13a15887e47bccc05519b96437, type: 3}
+      propertyPath: dialog.phrases.Array.data[2].phrase
+      value: "Quer dizer, isso nem \xE9 da minha conta, tem gente que gosta de nadar,
+        tem gente que gosta de andar, tem gente que gosta de voar! S\xF3 te falta
+        voar pra fazer tudo n\xE3o \xE9?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540876830849467562, guid: a4356c13a15887e47bccc05519b96437, type: 3}
+      propertyPath: dialog.phrases.Array.data[3].phrase
+      value: Hahah!
+      objectReference: {fileID: 0}
     - target: {fileID: 8547662364259234509, guid: a4356c13a15887e47bccc05519b96437, type: 3}
       propertyPath: fBtn
       value: 

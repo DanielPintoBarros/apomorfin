@@ -23828,27 +23828,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[0].phrase
-      value: "Olha, filho... Da superf\xEDcie s\xF3 vem duas coisas..."
+      value: "U\xE9! Pernas agora? Qual vai ser a pr\xF3xima?"
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[1].phrase
-      value: ...predador e lixo!
+      value: "Vai come\xE7ar a empurrar as lindas caixas do meu jardim?"
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[2].phrase
-      value: "N\xE3o vai achar nada por l\xE1."
+      value: " Fala s\xE9rio, vai ca\xE7ar o que fazer!"
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[3].phrase
-      value: "A \xFAnica coisa que vai achar \xE9 problema!"
+      value: "Voc\xEA devia era s\xF3 nadar, n\xE3o ficar andando ou sei l\xE1 o
+        qu\xEA."
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[4].phrase
-      value: Pode acabar virando isca de bicho-gente ou coisa pior.
+      value: Essa juventude... pernas!
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[5].phrase
-      value: "Essa juventude\u2026 Isso \xE9 igual a querer nadar contra a mar\xE9\u2026"
+      value: "Era s\xF3 o que me faltava\u2026 No meu tempo, a gente s\xF3 nadava
+        e agradecia!"
       objectReference: {fileID: 0}
     - target: {fileID: 4719091119752473681, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: m_Name
@@ -25032,35 +25034,35 @@ PrefabInstance:
       objectReference: {fileID: 155616840}
     - target: {fileID: 6503367325173248809, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
       propertyPath: dialog.phrases.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6503367325173248809, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
       propertyPath: dialog.phrases.Array.data[0].phrase
-      value: Uau!
+      value: "Voc\xEA est\xE1 pensando em sair daqui?"
       objectReference: {fileID: 0}
     - target: {fileID: 6503367325173248809, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
       propertyPath: dialog.phrases.Array.data[1].phrase
-      value: "Suas pernas s\xE3o\u2026"
+      value: Acho que precisaria de muita coragem pra sair desse recife.
       objectReference: {fileID: 0}
     - target: {fileID: 6503367325173248809, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
       propertyPath: dialog.phrases.Array.data[2].phrase
-      value: "Magn\xEDficas!"
+      value: "Imagina s\xF3!..."
       objectReference: {fileID: 0}
     - target: {fileID: 6503367325173248809, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
       propertyPath: dialog.phrases.Array.data[3].phrase
-      value: "Muita gente deve te dizer isso n\xE9, eu sei!"
+      value: "Sair por a\xED..."
       objectReference: {fileID: 0}
     - target: {fileID: 6503367325173248809, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
       propertyPath: dialog.phrases.Array.data[4].phrase
-      value: "Desculpa. Fico meio empolgado \xE0s vezes\u2026"
+      value: Deixar mais gente rir do meu nariz bolhudo.
       objectReference: {fileID: 0}
     - target: {fileID: 6503367325173248809, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
       propertyPath: dialog.phrases.Array.data[5].phrase
-      value: " Andar? Eu mal consigo boiar sem virar de barriga para cima\u2026"
+      value: "\xC9 melhor n\xE3o\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 6503367325173248809, guid: e10ebd3b6efe82c429bdd34c6c8d497e, type: 3}
       propertyPath: dialog.phrases.Array.data[6].phrase
-      value: " Andar? Eu mal consigo boiar sem virar de barriga para cima\u2026"
+      value: Outra hora quem sabe.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32414,32 +32416,32 @@ PrefabInstance:
       objectReference: {fileID: 155616840}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.size
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[0].phrase
-      value: "U\xE9! Pernas agora?"
+      value: "Por que nadar contra a mar\xE9?"
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[1].phrase
-      value: "Qual vai ser a pr\xF3xima?"
+      value: "Vai acabar encalhando se nadar pra l\xE1."
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[2].phrase
-      value: "Vai come\xE7ar a empurrar as lindas pedras do meu jardim?"
+      value: "A \xFAnica coisa que vai achar na praia \xE9 problema!"
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[3].phrase
-      value: " Fala s\xE9rio, vai ca\xE7ar o que fazer!"
+      value: "Pode acabar virando isca de bicho-b\xEDpede ou coisa pior."
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[4].phrase
-      value: "Voc\xEA devia era s\xF3 nadar, n\xE3o ficar andando ou sei l\xE1 o
-        qu\xEA."
+      value: Essa juventude...
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[5].phrase
-      value: Essa juventude... pernas!
+      value: "Era s\xF3 o que me faltava\u2026 No meu tempo, a gente s\xF3 nadava
+        e ainda agradecia!"
       objectReference: {fileID: 0}
     - target: {fileID: 569680775242051388, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: dialog.phrases.Array.data[6].phrase
@@ -42284,10 +42286,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1510698221424676537, guid: 7bd65aeb3efd1804eb79f1d9fe02db1d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746304726552133130, guid: 7bd65aeb3efd1804eb79f1d9fe02db1d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310875755122673751, guid: 7bd65aeb3efd1804eb79f1d9fe02db1d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 155616840}
+    - target: {fileID: 6589670968152541205, guid: 7bd65aeb3efd1804eb79f1d9fe02db1d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8620434467514651475, guid: 7bd65aeb3efd1804eb79f1d9fe02db1d, type: 3}
       propertyPath: m_Name
       value: Canvas
