@@ -12,16 +12,23 @@ public class DraggableBlock : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        rb.isKinematic = true;
-        if (!isBeingCarried && collision.collider.CompareTag("Player"))
+
+        if (collision.collider.CompareTag("Player"))
         {
-            touchingPlayer = collision.transform;
+            if (!isBeingCarried && collision.collider.CompareTag("Player"))
+            {
+                touchingPlayer = collision.transform;
+            }
+        }
+        else
+        {
+            rb.isKinematic = true;
         }
     }
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.transform == touchingPlayer)
+        if (collision.collider.CompareTag("Player"))
         {
             touchingPlayer = null;
         }
@@ -31,6 +38,8 @@ public class DraggableBlock : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = false;
+        rb.useGravity = true;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
         bc = GetComponent<BoxCollider>();
         bc.isTrigger = false;
     }
@@ -42,6 +51,7 @@ public class DraggableBlock : MonoBehaviour
 
     public void Grab()
     {
+        rb.isKinematic = true;
         isBeingCarried = true;
         initialRotation = transform.rotation;
     }
@@ -55,5 +65,6 @@ public class DraggableBlock : MonoBehaviour
     public void Release()
     {
         isBeingCarried = false;
+        rb.isKinematic = false;
     }
 }
