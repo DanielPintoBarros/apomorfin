@@ -8962,6 +8962,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.4474719, y: 2.2359672, z: 2.4502587}
   m_Center: {x: -0.0332371, y: 1.1211755, z: -0.044190586}
+--- !u!95 &465949048 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2768696905872015355, guid: 7bd65aeb3efd1804eb79f1d9fe02db1d, type: 3}
+  m_PrefabInstance: {fileID: 8857405558620444078}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &471347329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32943,6 +32948,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3039463260067762448, guid: 89520c1187bc0084b84650f7e8588ae1, type: 3}
+      propertyPath: uiAnim
+      value: 
+      objectReference: {fileID: 465949048}
     - target: {fileID: 3341773302583404690, guid: 89520c1187bc0084b84650f7e8588ae1, type: 3}
       propertyPath: dialogCtrl
       value: 
