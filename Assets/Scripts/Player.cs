@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     public Animator uiAnim;
     public string currentAnimation;
 
+    public GameObject feet, wings, spaceBtn;
+
     private float respawnDelay = 1.2f;
     private float currentDelay = 0f;
 
@@ -43,18 +45,46 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (canPush)
+        {
+            feet.SetActive(true);
+        }
+
+        if (canPush)
+        {
+            wings.SetActive(true);
+            spaceBtn.SetActive(true);
+        }
+
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
-        if ((moveX != 0.0f || moveZ != 0.0f) && currentAnimation == "Idle")
+        if (canPush)
         {
-            animator.SetBool("Walk", true);
-            currentAnimation = "Walk";
+            if ((moveX != 0.0f || moveZ != 0.0f) && currentAnimation == "Idle")
+            {
+                animator.SetBool("Walk", true);
+                currentAnimation = "Walk";
+            }
+            else if (moveX == 0.0f && moveZ == 0.0f && currentAnimation == "Walk")
+            {
+                animator.SetBool("Walk", false);
+                currentAnimation = "Idle";
+            }
         }
-        else if (moveX == 0.0f && moveZ == 0.0f && currentAnimation == "Walk")
+        else
         {
-            animator.SetBool("Walk", false);
-            currentAnimation = "Idle";
+            if ((moveX != 0.0f || moveZ != 0.0f) && currentAnimation == "Idle")
+            {
+                animator.SetBool("Swim", true);
+                currentAnimation = "Swim";
+            }
+            else if (moveX == 0.0f && moveZ == 0.0f && currentAnimation == "Swim")
+            {
+                animator.SetBool("Swim", false);
+                currentAnimation = "Idle";
+            }
         }
+        
 
         Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
         Vector3 move;
@@ -74,27 +104,29 @@ public class Player : MonoBehaviour
         }
         rb.MovePosition(rb.position + move);
 
-        // Pulo
-        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || !airJump))
+        if (canPush && canFly)
         {
-            if (currentAnimation == "Walk" || currentAnimation == "Fly" || currentAnimation == "Swim")
+            if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || !airJump))
             {
-                animator.SetBool(currentAnimation, false);
-            }
-            animator.SetTrigger("Jump");
-
-            if (!isGrounded && !airJump)
-            {
-                animator.SetTrigger("Land");
+                if (currentAnimation == "Walk" || currentAnimation == "Fly" || currentAnimation == "Swim")
+                {
+                    animator.SetBool(currentAnimation, false);
+                }
                 animator.SetTrigger("Jump");
-                airJump = true;
-            }
 
-            Vector3 velocity = rb.velocity;
-            velocity.y = 0f;
-            rb.velocity = velocity;
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
+                if (!isGrounded && !airJump)
+                {
+                    animator.SetTrigger("Land");
+                    animator.SetTrigger("Jump");
+                    airJump = true;
+                }
+
+                Vector3 velocity = rb.velocity;
+                velocity.y = 0f;
+                rb.velocity = velocity;
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                isGrounded = false;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E) && canPush)

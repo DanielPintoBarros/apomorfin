@@ -91,6 +91,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8897251122701883517}
   m_SourcePrefab: {fileID: 100100000, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
+--- !u!1 &688477713407757700 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8871197930042950466, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
+  m_PrefabInstance: {fileID: 8255420622559334086}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &941292855682000058 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -35745619698210180, guid: 7763a1356dce46943b483a6404b844f1, type: 3}
@@ -195,6 +200,9 @@ MonoBehaviour:
   respawnPoint: {fileID: 0}
   uiAnim: {fileID: 0}
   currentAnimation: 
+  feet: {fileID: 688477713407757700}
+  wings: {fileID: 941292855682000058}
+  spaceBtn: {fileID: 0}
 --- !u!114 &3341773302583404690
 MonoBehaviour:
   m_ObjectHideFlags: 0
