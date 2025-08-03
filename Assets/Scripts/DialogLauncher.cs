@@ -6,11 +6,6 @@ public class DialogLauncher : MonoBehaviour
 {
     [SerializeField] DialogCtrl dialogCtrl;
     [SerializeField] Dialog dialog;
-    [SerializeField] Dialog conditionalDialog;
-
-    [SerializeField] private Player player;
-    [SerializeField] private bool mustCheckAbilities;
-    [SerializeField] private string abilityName;
 
     public void Initialize()
     {
@@ -19,20 +14,6 @@ public class DialogLauncher : MonoBehaviour
             return;
         }
 
-        if (mustCheckAbilities)
-        {
-            if (player.CheckCanLearnAbility(abilityName))
-            {
-                dialogCtrl.Initialize(conditionalDialog);
-            }
-            else
-            {
-                dialogCtrl.Initialize(dialog);
-            }
-        }
-        else
-        {
-            dialogCtrl.Initialize(dialog);
-        }
+        dialogCtrl.Initialize(dialog);
     }
 }

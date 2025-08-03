@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private bool canLearnFly = false, canLearnPush = false, canFly = false, canPush = false; 
+    [SerializeField] private bool canLearnFly, canLearnPush, canFly, canPush; 
 
     public float moveSpeed;
     public float jumpForce;
@@ -242,18 +242,4 @@ public class Player : MonoBehaviour
         }
     }
 
-    public bool CheckCanLearnAbility(string ability)
-    {
-        if (ability == "push" && canLearnPush == true)
-        {
-            return true;
-        }
-
-        if (ability == "fly" && canLearnFly == true)
-        {
-            return false;
-        }
-
-        return false;
-    }
 }
