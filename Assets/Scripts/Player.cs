@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
             feet.SetActive(true);
         }
 
-        if (canPush)
+        if (canFly)
         {
             wings.SetActive(true);
             spaceBtn.SetActive(true);
@@ -103,6 +103,9 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20f);
         }
         rb.MovePosition(rb.position + move);
+
+
+
 
         if (canPush && canFly)
         {

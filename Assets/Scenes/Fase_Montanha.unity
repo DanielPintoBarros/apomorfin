@@ -19276,6 +19276,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4854953343423047869, guid: 7de856d7265090743ad7c02c730ff8fb, type: 3}
   m_PrefabInstance: {fileID: 1403105061}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &684764918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5844996622440394577, guid: 7bd65aeb3efd1804eb79f1d9fe02db1d, type: 3}
+  m_PrefabInstance: {fileID: 171720879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &685009640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44723,6 +44728,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 155564131}
     m_Modifications:
+    - target: {fileID: 3220190710058419127, guid: 150cf739745715c42b5cdef6ea34afe6, type: 3}
+      propertyPath: eBtn
+      value: 
+      objectReference: {fileID: 684764918}
     - target: {fileID: 8161639091527717182, guid: 150cf739745715c42b5cdef6ea34afe6, type: 3}
       propertyPath: m_Name
       value: caixa_nova 1
@@ -46467,6 +46476,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 155564131}
     m_Modifications:
+    - target: {fileID: 3220190710058419127, guid: 150cf739745715c42b5cdef6ea34afe6, type: 3}
+      propertyPath: eBtn
+      value: 
+      objectReference: {fileID: 684764918}
     - target: {fileID: 8161639091527717182, guid: 150cf739745715c42b5cdef6ea34afe6, type: 3}
       propertyPath: m_Name
       value: caixa_nova 1 (2)
@@ -49599,6 +49612,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 155564131}
     m_Modifications:
+    - target: {fileID: 3220190710058419127, guid: 150cf739745715c42b5cdef6ea34afe6, type: 3}
+      propertyPath: eBtn
+      value: 
+      objectReference: {fileID: 684764918}
     - target: {fileID: 8161639091527717182, guid: 150cf739745715c42b5cdef6ea34afe6, type: 3}
       propertyPath: m_Name
       value: caixa_nova 1 (1)
