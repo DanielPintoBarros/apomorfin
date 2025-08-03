@@ -9187,6 +9187,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.096012, y: 2.0718539, z: 2.1344073}
   m_Center: {x: 0.018742621, y: 1.0346085, z: -0.0023173094}
+--- !u!1 &228332422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5651022336401559094, guid: 7bd65aeb3efd1804eb79f1d9fe02db1d, type: 3}
+  m_PrefabInstance: {fileID: 1839589112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &230195210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54041,6 +54046,10 @@ PrefabInstance:
       propertyPath: canPush
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3039463260067762448, guid: 89520c1187bc0084b84650f7e8588ae1, type: 3}
+      propertyPath: spaceBtn
+      value: 
+      objectReference: {fileID: 228332422}
     - target: {fileID: 3039463260067762448, guid: 89520c1187bc0084b84650f7e8588ae1, type: 3}
       propertyPath: dialogCtrl
       value: 

@@ -104,7 +104,10 @@ public class Player : MonoBehaviour
         }
         rb.MovePosition(rb.position + move);
 
+        if (canPush)
+        {
 
+        }
 
 
         if (canPush && canFly)
