@@ -22764,6 +22764,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2479314514200987245, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
   m_PrefabInstance: {fileID: 1144461490}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1148887106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 549508202268416172, guid: a0d7f08c915a985498cd2e28f29d9068, type: 3}
+  m_PrefabInstance: {fileID: 1605129928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1149490700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24784,7 +24789,7 @@ PrefabInstance:
     - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1148887106}
     - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
       propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
@@ -31903,8 +31908,10 @@ MonoBehaviour:
         m_Calls: []
   conditionalDialog:
     phrases:
-    - phrase: "Agora voc\xEA pode usar suas pernas poderosas para empurrar objetos
-        pesados!"
+    - phrase: "Que maravilha! Com pernas poderosas como essas voc\xEA conseguiria
+        empurrar coisas enormes como um navio!"
+    - phrase: "rincadeira, mas caixas e barris devem ser uma barreira mais f\xE1cil
+        de mover agora."
     npcName: 
     action:
       m_PersistentCalls:
@@ -31965,7 +31972,7 @@ MonoBehaviour:
   pressedBtn:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1148887106}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6

@@ -60,6 +60,8 @@ public class Player : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical");
         if (canPush)
         {
+            animator.SetBool("Swim", false);
+
             if ((moveX != 0.0f || moveZ != 0.0f))
             {
                 animator.SetBool("Walk", true);
@@ -104,9 +106,25 @@ public class Player : MonoBehaviour
         }
         rb.MovePosition(rb.position + move);
 
-        if (canPush)
+        if (canPush && !canFly)
         {
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded) 
+            {
+                if (currentAnimation == "Walk" || currentAnimation == "Fly" || currentAnimation == "Swim")
+                {
+                    animator.SetBool(currentAnimation, false);  
+                }
 
+                animator.SetTrigger("Jump");  
+
+                Vector3 velocity = rb.velocity;
+                velocity.y = 0f;
+                rb.velocity = velocity;
+
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+                isGrounded = false;
+            }
         }
 
 
@@ -220,7 +238,7 @@ public class Player : MonoBehaviour
 
     void DieAndRespawn()
     {
-        animator.SetTrigger("Hurt");
+        animator.Play("Hurt");
         uiAnim.Play("WaterBillboardTransitionReverse");
 
         rb.velocity = Vector3.zero; // Zera velocidade ao morrer
@@ -250,6 +268,7 @@ public class Player : MonoBehaviour
         if (isGrounded)
         {
             animator.SetBool("Fly", false);
+            animator.SetTrigger("Land");
             airJump = false;
         }
     }
