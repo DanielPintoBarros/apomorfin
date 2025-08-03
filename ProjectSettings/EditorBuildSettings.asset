@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase_Montanha.unity
     guid: 74088e7f9f31cab49a978ecf9e541920
+  - enabled: 1
+    path: Assets/Scenes/Finale.unity
+    guid: b4a99e71241c720409f538f5f60e4b8a
   m_configObjects: {}

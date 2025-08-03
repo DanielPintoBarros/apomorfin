@@ -308,7 +308,7 @@ public class Player : MonoBehaviour
 
         if (ability == "fly" && canLearnFly == true)
         {
-            return false;
+            return true;
         }
 
         return false;
