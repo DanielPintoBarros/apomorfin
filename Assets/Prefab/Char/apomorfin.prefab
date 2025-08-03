@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f6542b270a1a94788e75faca1fa5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogCtrl: {fileID: 0}
   moveSpeed: 5
   jumpForce: 5
   isGrounded: 0
@@ -197,6 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1ef456e51c56e4e979851a29b4d9d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogCtrl: {fileID: 0}
+  interactionRadius: 1
   isInteracting: 0
 --- !u!95 &8100677855734560936
 Animator:

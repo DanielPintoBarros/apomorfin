@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3200b89281f297c45b1240ad8a810ec4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.95252347
+      value: -15.702
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3200b89281f297c45b1240ad8a810ec4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.028207064
+      value: 2.5879853
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3200b89281f297c45b1240ad8a810ec4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.2049754
+      value: 41.474
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3200b89281f297c45b1240ad8a810ec4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.21260415
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3200b89281f297c45b1240ad8a810ec4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3200b89281f297c45b1240ad8a810ec4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.9771384
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3200b89281f297c45b1240ad8a810ec4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3200b89281f297c45b1240ad8a810ec4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 155.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3200b89281f297c45b1240ad8a810ec4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -114,10 +114,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.7032752
+  m_Height: 1.9852432
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.25, z: 0}
 --- !u!114 &8547662364259234509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactPlayer: {fileID: 0}
+  dialogCtrl: {fileID: 0}
   pressedBtn:
     m_PersistentCalls:
       m_Calls:
@@ -146,6 +147,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  fBtn: {fileID: 0}
+  dialogBox: {fileID: 0}
 --- !u!114 &8540876830849467562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,5 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogCtrl: {fileID: 0}
   dialog:
-    phrases: []
-    npcName: Gaivota
+    phrases:
+    - phrase: Ai Papai!
+    - phrase: Tome!!!
+    npcName: Gaivota Giovanna

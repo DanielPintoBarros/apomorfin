@@ -7,7 +7,7 @@ public class InteractPlayer : MonoBehaviour
     [SerializeField] private DialogCtrl dialogCtrl;
     private DialogLauncher dialogLauncher;
 
-    [SerializeField] private float interactionRadius = 2f;
+    [SerializeField] private float interactionRadius;
     public bool isInteracting;
 
 

@@ -5,19 +5,23 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private DialogCtrl dialogCtrl;
+    [SerializeField] private bool canLearnFly, canLearnPush, canFly, canPush; 
 
     public float moveSpeed;
     public float jumpForce;
     private Rigidbody rb;
     public bool isGrounded;
     public bool airJump;
+    public bool isDead = false;
     private float grabMoveLoss = 0.3f;
     public Vector3 lastCheckpointPosition;
     public RespawnPoint respawnPoint;
     private Animator animator;
+    public Animator uiAnim;
     public string currentAnimation;
 
+    private float respawnDelay = 1.2f;
+    private float currentDelay = 0f;
 
     private DraggableBlock currentBlock;
     private Vector3 blockOffset;
@@ -78,22 +82,22 @@ public class Player : MonoBehaviour
                 animator.SetBool(currentAnimation, false);
             }
             animator.SetTrigger("Jump");
-            // Tratamento para o pulo duplo
+
             if (!isGrounded && !airJump)
             {
                 animator.SetTrigger("Land");
                 animator.SetTrigger("Jump");
                 airJump = true;
             }
+
             Vector3 velocity = rb.velocity;
             velocity.y = 0f;
             rb.velocity = velocity;
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
-
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && canPush)
         {
             if (currentBlock != null)
             {
@@ -109,6 +113,16 @@ public class Player : MonoBehaviour
         if (currentBlock != null)
         {
             currentBlock.Follow(move);
+        }
+
+        if (isDead)
+        {
+            currentDelay += Time.deltaTime;
+
+            if (currentDelay >= respawnDelay)
+            {
+                DieAndRespawn();
+            }
         }
     }
 
@@ -161,14 +175,16 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Damage"))
         {
             // Morreu - teleporta para o último respawn
-            DieAndRespawn();
+            uiAnim.Play("WaterBillboardTransitionVerse");
+            isDead = true;
         }
     }
 
     void DieAndRespawn()
     {
         animator.SetTrigger("Hurt");
-        // Opcional: adicionar delay, efeitos, resetar blocos, etc.
+        uiAnim.Play("WaterBillboardTransitionReverse");
+
         rb.velocity = Vector3.zero; // Zera velocidade ao morrer
         if (currentBlock != null)
         {
@@ -179,7 +195,10 @@ public class Player : MonoBehaviour
         {
             transform.position = respawnPoint.GetSpawnPosition();
         }
+
         animator.SetTrigger("Reset");
+        isDead = false;
+        currentDelay = 0f;
     }
     
     void CheckIfGrounded()
@@ -196,4 +215,31 @@ public class Player : MonoBehaviour
             airJump = false;
         }
     }
+
+    public void CanLearnAbility(string ability)
+    {
+        if (ability == "push") 
+        {
+            canLearnPush = true;
+        }
+
+        if (ability == "fly")
+        {
+            canLearnFly = true;
+        }
+    }
+
+    public void LearnAbility(string ability)
+    {
+        if (ability == "push")
+        {
+            canPush = true;
+        }
+
+        if (ability == "fly")
+        {
+            canFly = true;
+        }
+    }
+
 }

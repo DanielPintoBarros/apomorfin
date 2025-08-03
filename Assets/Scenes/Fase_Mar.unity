@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.103137575, g: 0.37289137, b: 0.43837482, a: 1}
+  m_IndirectSpecularColor: {r: 0.10313733, g: 0.37289193, b: 0.4383753, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14773,6 +14773,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b875c276ac831c4d9a8d5ba94a15e94, type: 3}
   m_PrefabInstance: {fileID: 1761834393}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &786465974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5374633565532448792, guid: a0d7f08c915a985498cd2e28f29d9068, type: 3}
+  m_PrefabInstance: {fileID: 1605129928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &798899620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23900,6 +23905,38 @@ PrefabInstance:
       propertyPath: interactPlayer
       value: 
       objectReference: {fileID: 1125601546}
+    - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1733103937}
+    - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CanLearnAbility
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Player, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: push
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447427528441149506, guid: 1a1d5e2693e998c498d858967d884133, type: 3}
+      propertyPath: pressedBtn.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30657,13 +30694,68 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5374633565532448792, guid: a0d7f08c915a985498cd2e28f29d9068, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1605129931}
+    - targetCorrespondingSourceObject: {fileID: 5374633565532448792, guid: a0d7f08c915a985498cd2e28f29d9068, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1605129930}
   m_SourcePrefab: {fileID: 100100000, guid: a0d7f08c915a985498cd2e28f29d9068, type: 3}
 --- !u!4 &1605129929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4746046807187108514, guid: a0d7f08c915a985498cd2e28f29d9068, type: 3}
   m_PrefabInstance: {fileID: 1605129928}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605129930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786465974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249598bee2d88934c9286015ce6588d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogCtrl: {fileID: 155616840}
+  dialog:
+    phrases:
+    - phrase: "Agora voc\xEA pode usar suas pernas poderosas para empurrar objetos
+        pesados!"
+    npcName: 
+--- !u!114 &1605129931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786465974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419d67c64bd3bf444afc250ea235d73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactPlayer: {fileID: 1125601546}
+  dialogCtrl: {fileID: 155616840}
+  pressedBtn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1733103937}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: LearnAbility
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: push
+          m_BoolArgument: 0
+        m_CallState: 2
+  fBtn: {fileID: 1603356547}
+  dialogBox: {fileID: 1456871677}
 --- !u!1001 &1614530766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32855,6 +32947,10 @@ PrefabInstance:
       propertyPath: dialogCtrl
       value: 
       objectReference: {fileID: 155616840}
+    - target: {fileID: 3341773302583404690, guid: 89520c1187bc0084b84650f7e8588ae1, type: 3}
+      propertyPath: interactionRadius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8438510040971225389, guid: 89520c1187bc0084b84650f7e8588ae1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -32920,6 +33016,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89520c1187bc0084b84650f7e8588ae1, type: 3}
+--- !u!114 &1733103937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3039463260067762448, guid: 89520c1187bc0084b84650f7e8588ae1, type: 3}
+  m_PrefabInstance: {fileID: 1733103936}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f6542b270a1a94788e75faca1fa5f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1733522077
 PrefabInstance:
   m_ObjectHideFlags: 0
