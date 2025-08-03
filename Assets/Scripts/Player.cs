@@ -60,12 +60,12 @@ public class Player : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical");
         if (canPush)
         {
-            if ((moveX != 0.0f || moveZ != 0.0f) && currentAnimation == "Idle")
+            if ((moveX != 0.0f || moveZ != 0.0f))
             {
                 animator.SetBool("Walk", true);
                 currentAnimation = "Walk";
             }
-            else if (moveX == 0.0f && moveZ == 0.0f && currentAnimation == "Walk")
+            else if (moveX == 0.0f && moveZ == 0.0f)
             {
                 animator.SetBool("Walk", false);
                 currentAnimation = "Idle";
@@ -112,14 +112,14 @@ public class Player : MonoBehaviour
                 {
                     animator.SetBool(currentAnimation, false);
                 }
-                animator.SetTrigger("Jump");
+                animator.SetBool("Fly", true);
 
                 if (!isGrounded && !airJump)
                 {
-                    animator.SetTrigger("Land");
-                    animator.SetTrigger("Jump");
                     airJump = true;
                 }
+
+
 
                 Vector3 velocity = rb.velocity;
                 velocity.y = 0f;
@@ -243,7 +243,7 @@ public class Player : MonoBehaviour
 
         if (isGrounded)
         {
-            animator.SetTrigger("Land");
+            animator.SetBool("Fly", false);
             airJump = false;
         }
     }

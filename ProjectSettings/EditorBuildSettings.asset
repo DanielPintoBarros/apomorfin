@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase_Praia.unity
     guid: 7496e35eb7ade114e9b623ad2b03f1d6
+  - enabled: 1
+    path: Assets/Scenes/Fase_Montanha.unity
+    guid: 74088e7f9f31cab49a978ecf9e541920
   m_configObjects: {}
