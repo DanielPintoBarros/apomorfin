@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Apomorfin\\apomorfin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{027AF69C-E920-EA5C-9A4F-6B30A7C93302}|Assembly-CSharp.csproj|c:\\apomorfin\\apomorfin\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{027AF69C-E920-EA5C-9A4F-6B30A7C93302}|Assembly-CSharp.csproj|c:\\apomorfin\\apomorfin\\assets\\scripts\\respawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{027AF69C-E920-EA5C-9A4F-6B30A7C93302}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\respawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{027AF69C-E920-EA5C-9A4F-6B30A7C93302}|Assembly-CSharp.csproj|C:\\Apomorfin\\apomorfin\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{027AF69C-E920-EA5C-9A4F-6B30A7C93302}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RespawnPoint.cs",
+              "DocumentMoniker": "C:\\Apomorfin\\apomorfin\\Assets\\Scripts\\RespawnPoint.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RespawnPoint.cs",
+              "ToolTip": "C:\\Apomorfin\\apomorfin\\Assets\\Scripts\\RespawnPoint.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RespawnPoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T22:54:40.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "C:\\Apomorfin\\apomorfin\\Assets\\Scripts\\CameraFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
@@ -30,12 +47,11 @@
               "RelativeToolTip": "Assets\\Scripts\\CameraFollow.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T21:56:28.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-02T21:56:28.332Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "C:\\Apomorfin\\apomorfin\\Assets\\CameraFollow.cs",
               "RelativeDocumentMoniker": "Assets\\CameraFollow.cs",
