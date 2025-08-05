@@ -87,6 +87,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Ouri\xE7o (46)"
       objectReference: {fileID: 0}
+    - target: {fileID: 3574524434105082348, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574524434105082348, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
+      propertyPath: m_Size.z
+      value: 0.39
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -148,6 +156,14 @@ PrefabInstance:
     - target: {fileID: 2964384257463278807, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
       propertyPath: m_Name
       value: "Ouri\xE7o (47)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574524434105082348, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574524434105082348, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
+      propertyPath: m_Size.z
+      value: 0.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -211,6 +227,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Ouri\xE7o (48)"
       objectReference: {fileID: 0}
+    - target: {fileID: 3574524434105082348, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574524434105082348, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
+      propertyPath: m_Size.z
+      value: 0.39
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -272,6 +296,14 @@ PrefabInstance:
     - target: {fileID: 2964384257463278807, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
       propertyPath: m_Name
       value: "Ouri\xE7o (49)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574524434105082348, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574524434105082348, guid: cf3a6b0651ecb974bafd9f5aa70cb7ee, type: 3}
+      propertyPath: m_Size.z
+      value: 0.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
